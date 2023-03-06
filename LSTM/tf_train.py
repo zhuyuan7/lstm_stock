@@ -88,8 +88,8 @@ def train(filename, model_name, day='tomorrow'):
     model.save(file_name)
     print("Saved model `{}` to disk".format(file_name))
 
-for f in os.listdir(r"/home/joo/Stock-Market-Prediction/data/"):
+for f in os.listdir(r"./data/"):
     if (f.endswith('.csv')):
         for d in ['ms_today', 'ms_tomorrow']:
-            train(os.path.join(r"/home/joo/Stock-Market-Prediction/data/", f), f.replace(".csv", "_" + d + "_.hdf5"), d)
+            train(os.path.join(r"./data/", f), f.replace(".csv", "_" + d + "_.hdf5"), d)
 
